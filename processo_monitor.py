@@ -44,6 +44,7 @@ ARQUIVOS_RUNTIME = (
     "avaliacao_edge_escanteios_asiaticos.py",
     "avaliacao_probabilidade_sem_vig.py",
     "avaliacao_portfolio_edge.py",
+    "avaliacao_clv_live.py",
     "coletor_packball.py", "conectividade.py", "configuracao.py",
     "dataset_temporal.py",
     "diagnostico_gols_antecipados.py",
