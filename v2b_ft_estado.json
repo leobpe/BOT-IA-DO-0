@@ -1,0 +1,10 @@
+{
+  "versao": "controle-operacional-v2b-ft-v1",
+  "ativo": true,
+  "estado": "ativo_manual",
+  "motivo": "reativacao_manual",
+  "assinatura": "manual|2026-08-26T22:09:20",
+  "atualizado_em": "2026-08-26T22:09:20",
+  "metricas": {},
+  "rollback": "python controlar_v2b_ft.py --sombra"
+}

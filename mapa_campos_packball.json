@@ -1,0 +1,758 @@
+{
+  "url": "https://packball.com/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live",
+  "titulo": "Altay Oskemen W x Zhenys Astana W Ao vivo | PackBall",
+  "metadados": [
+    {
+      "tag": "LI",
+      "classe": "settings-menu updates",
+      "title": "Atualizações",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "7",
+      "textoPai": "7"
+    },
+    {
+      "tag": "LI",
+      "classe": "settings-menu translate",
+      "title": "Linguagem",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "7"
+    },
+    {
+      "tag": "LI",
+      "classe": "settings-menu logged helper",
+      "title": "Tema",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "7"
+    },
+    {
+      "tag": "LI",
+      "classe": "settings-menu logged helper",
+      "title": "Ajuda",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "7"
+    },
+    {
+      "tag": "DIV",
+      "classe": "sc-jqUVSM fuqUOr item-country",
+      "title": "Kazakhstan",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "KAZ(7)",
+      "textoPai": "KAZ(7)"
+    },
+    {
+      "tag": "DIV",
+      "classe": "card-action-mode",
+      "title": "Colunas",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Estatísticas Pré-Jogo"
+    },
+    {
+      "tag": "SPAN",
+      "classe": "",
+      "title": "Ordenar por",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "LI",
+      "classe": "col flag sticky sort",
+      "title": "País",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Liga"
+    },
+    {
+      "tag": "LI",
+      "classe": "col time sticky sort",
+      "title": "Horário de início",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "LI",
+      "classe": "status col sticky",
+      "title": "Status",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "LI",
+      "classe": "col ht-score",
+      "title": "Resultado do 1º tempo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "HT",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom odds sort",
+      "title": "Odds Casa para vencer",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "1",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "1"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom odds sort",
+      "title": "Odds Visitante para vencer",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "2",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "2"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Favoritismo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "FAV",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "FAV"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom ha sort",
+      "title": "Eficiência",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom ha sort",
+      "title": "Classificação",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom ha sort",
+      "title": "Pontos por jogo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "PPG",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "PPG"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Média de gols",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "AVG",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "AVG"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Expectativa de gols",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "ExG",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "ExG"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Mais de 2.5 gols",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "2.5+",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "2.5+"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Ambas marcaram",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "BTS",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "BTS"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Média de escanteios",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "AVG",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "AVG"
+    },
+    {
+      "tag": "LI",
+      "classe": "col custom tt sort",
+      "title": "Expectativa de escanteios",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "ExC",
+      "textoPai": "Liga Buscar jogo HT 1 2 FAV PPG AVG ExG 2.5+ BTS AVG ExC"
+    },
+    {
+      "tag": "I",
+      "classe": "close-sort",
+      "title": "Remover ordenação automática desta coluna",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "ExC"
+    },
+    {
+      "tag": "LI",
+      "classe": "col flag",
+      "title": "Kazakhstan",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8"
+    },
+    {
+      "tag": "LI",
+      "classe": "short-country col sticky",
+      "title": "Kazakhstan",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "KAZ",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8"
+    },
+    {
+      "tag": "LI",
+      "classe": "title-league col reduce sticky",
+      "title": "Womens Championship",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "Womens Championship",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8"
+    },
+    {
+      "tag": "SPAN",
+      "classe": "half-time",
+      "title": "Intervalo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "HT",
+      "textoPai": "HT '"
+    },
+    {
+      "tag": "LI",
+      "classe": "active",
+      "title": "Altay Oskemen W x Zhenys Astana W",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "HT ' 0-4",
+      "textoPai": "HT ' 0-4"
+    },
+    {
+      "tag": "SPAN",
+      "classe": "half-time",
+      "title": "Intervalo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "HT",
+      "textoPai": "HT '"
+    },
+    {
+      "tag": "I",
+      "classe": "close-bar-all",
+      "title": "Fechar o jogo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Kazakhstan: Womens Championship - Rodada: 12"
+    },
+    {
+      "tag": "I",
+      "classe": "config-bar",
+      "title": "Configurações dos elementos ao vivo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Kazakhstan: Womens Championship - Rodada: 12"
+    },
+    {
+      "tag": "I",
+      "classe": "external-link",
+      "title": "Abrir em nova janela",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Kazakhstan: Womens Championship - Rodada: 12"
+    },
+    {
+      "tag": "I",
+      "classe": "add-side",
+      "title": "Fixar jogo no topo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "Kazakhstan: Womens Championship - Rodada: 12"
+    },
+    {
+      "tag": "DIV",
+      "classe": "rank",
+      "title": "Classificação pré-jogo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "10°",
+      "textoPai": "10°"
+    },
+    {
+      "tag": "SPAN",
+      "classe": "odds",
+      "title": "Odds pré-jogo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "10°"
+    },
+    {
+      "tag": "DIV",
+      "classe": "ht-score",
+      "title": "Resultado do 1º tempo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "HT 0-4",
+      "textoPai": "HT 0-4 0-4"
+    },
+    {
+      "tag": "I",
+      "classe": "sc-chKnlQ hBedGb",
+      "title": "Fixar na guia",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "HT 0-4 0-4"
+    },
+    {
+      "tag": "SPAN",
+      "classe": "ht",
+      "title": "Intervalo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "Intervalo '",
+      "textoPai": "Intervalo '"
+    },
+    {
+      "tag": "DIV",
+      "classe": "rank",
+      "title": "Classificação pré-jogo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "2°",
+      "textoPai": "2°"
+    },
+    {
+      "tag": "SPAN",
+      "classe": "odds",
+      "title": "Odds pré-jogo",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": "2°"
+    },
+    {
+      "tag": "DIV",
+      "classe": "icon-page",
+      "title": "Inicio",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    },
+    {
+      "tag": "DIV",
+      "classe": "item-counter",
+      "title": "Estatísticas",
+      "ariaLabel": "",
+      "alt": "",
+      "dataOriginalTitle": "",
+      "dataBsOriginalTitle": "",
+      "texto": "",
+      "textoPai": ""
+    }
+  ],
+  "valores": [
+    {
+      "valor": "0-4",
+      "tag": "LI",
+      "classe": "result-f col sticky",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "textoAvo": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "htmlPai": "<ul class=\"row fix-19695644\"><li class=\"col fav sticky\"><span class=\"sc-eTtvFv dWDwIp\"><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 576 512\" color=\"#c3c3c3\" class=\"icon-favorite\" height=\"17\" width=\"17\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z\"></path></svg></span></li><li class=\"col add-match sticky\"><span><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 1024 1024\" color=\"#c3c3c3\" height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3-15.4 12.3-16.6 35.4-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 0 0-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8z\"></path></svg></span></li><li class=\"col flag\" title=\"Kazakhstan\"><span class=\"sc-breuTD dmIY\"></span></li><li title=\"Kazakhstan\" class=\"short-country col sticky\">KAZ</li><li title=\"Womens Championship\" class=\"title-league col reduce sticky\"><a href=\"/pt/matches/2616/league/kazakhstan-womens-championship/summary\"><span class=\"clamp1\">Womens Championship</span></a></li><li class=\"col time sticky\"><time datetime=\"1784545200000\">07:00</time></li><li class=\"col blin sticky\"><span class=\"sc-fmGnzW gvXbSq\"><span title=\"Intervalo\" class=\"half-time\">HT</span><small class=\"blink\">'</small></span></li><li class=\"team-name-home col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-home\">Altay Oskemen W</span></a></li><li class=\"result-f col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"sc-aVUuG kmCCXb\">0-4</span></a></li><li class=\"team-name-away col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-away\">Zhenys Astana W</span></a></li><li class=\"col ht-score\"><span>0-4</span></li><li class=\"col custom odds\"></li><li class=\"col custom odds\"></li><li class=\"col custom b0 tt\"></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span>%</span></span><span>-</span><span class=\"t2\"><span>83</span><span>%</span></span></li><li class=\"col custom b3 ha\"><span class=\"t3\"><span>10</span><span>°</span></span><span>-</span><span class=\"t2\"><span>2</span><span>°</span></span></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span></span></spa"
+    },
+    {
+      "valor": "0-4",
+      "tag": "A",
+      "classe": "active",
+      "textoPai": "0-4",
+      "textoAvo": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "htmlPai": "<li class=\"result-f col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"sc-aVUuG kmCCXb\">0-4</span></a></li>"
+    },
+    {
+      "valor": "0-4",
+      "tag": "SPAN",
+      "classe": "sc-aVUuG kmCCXb",
+      "textoPai": "0-4",
+      "textoAvo": "0-4",
+      "htmlPai": "<a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"sc-aVUuG kmCCXb\">0-4</span></a>"
+    },
+    {
+      "valor": "0-4",
+      "tag": "LI",
+      "classe": "col ht-score",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "textoAvo": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "htmlPai": "<ul class=\"row fix-19695644\"><li class=\"col fav sticky\"><span class=\"sc-eTtvFv dWDwIp\"><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 576 512\" color=\"#c3c3c3\" class=\"icon-favorite\" height=\"17\" width=\"17\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z\"></path></svg></span></li><li class=\"col add-match sticky\"><span><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 1024 1024\" color=\"#c3c3c3\" height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3-15.4 12.3-16.6 35.4-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 0 0-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8z\"></path></svg></span></li><li class=\"col flag\" title=\"Kazakhstan\"><span class=\"sc-breuTD dmIY\"></span></li><li title=\"Kazakhstan\" class=\"short-country col sticky\">KAZ</li><li title=\"Womens Championship\" class=\"title-league col reduce sticky\"><a href=\"/pt/matches/2616/league/kazakhstan-womens-championship/summary\"><span class=\"clamp1\">Womens Championship</span></a></li><li class=\"col time sticky\"><time datetime=\"1784545200000\">07:00</time></li><li class=\"col blin sticky\"><span class=\"sc-fmGnzW gvXbSq\"><span title=\"Intervalo\" class=\"half-time\">HT</span><small class=\"blink\">'</small></span></li><li class=\"team-name-home col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-home\">Altay Oskemen W</span></a></li><li class=\"result-f col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"sc-aVUuG kmCCXb\">0-4</span></a></li><li class=\"team-name-away col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-away\">Zhenys Astana W</span></a></li><li class=\"col ht-score\"><span>0-4</span></li><li class=\"col custom odds\"></li><li class=\"col custom odds\"></li><li class=\"col custom b0 tt\"></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span>%</span></span><span>-</span><span class=\"t2\"><span>83</span><span>%</span></span></li><li class=\"col custom b3 ha\"><span class=\"t3\"><span>10</span><span>°</span></span><span>-</span><span class=\"t2\"><span>2</span><span>°</span></span></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span></span></spa"
+    },
+    {
+      "valor": "0-4",
+      "tag": "SPAN",
+      "classe": "",
+      "textoPai": "0-4",
+      "textoAvo": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "htmlPai": "<li class=\"col ht-score\"><span>0-4</span></li>"
+    },
+    {
+      "valor": "0% - 83%",
+      "tag": "LI",
+      "classe": "col custom b3 ha",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "textoAvo": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "htmlPai": "<ul class=\"row fix-19695644\"><li class=\"col fav sticky\"><span class=\"sc-eTtvFv dWDwIp\"><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 576 512\" color=\"#c3c3c3\" class=\"icon-favorite\" height=\"17\" width=\"17\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z\"></path></svg></span></li><li class=\"col add-match sticky\"><span><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 1024 1024\" color=\"#c3c3c3\" height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3-15.4 12.3-16.6 35.4-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 0 0-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8z\"></path></svg></span></li><li class=\"col flag\" title=\"Kazakhstan\"><span class=\"sc-breuTD dmIY\"></span></li><li title=\"Kazakhstan\" class=\"short-country col sticky\">KAZ</li><li title=\"Womens Championship\" class=\"title-league col reduce sticky\"><a href=\"/pt/matches/2616/league/kazakhstan-womens-championship/summary\"><span class=\"clamp1\">Womens Championship</span></a></li><li class=\"col time sticky\"><time datetime=\"1784545200000\">07:00</time></li><li class=\"col blin sticky\"><span class=\"sc-fmGnzW gvXbSq\"><span title=\"Intervalo\" class=\"half-time\">HT</span><small class=\"blink\">'</small></span></li><li class=\"team-name-home col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-home\">Altay Oskemen W</span></a></li><li class=\"result-f col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"sc-aVUuG kmCCXb\">0-4</span></a></li><li class=\"team-name-away col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-away\">Zhenys Astana W</span></a></li><li class=\"col ht-score\"><span>0-4</span></li><li class=\"col custom odds\"></li><li class=\"col custom odds\"></li><li class=\"col custom b0 tt\"></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span>%</span></span><span>-</span><span class=\"t2\"><span>83</span><span>%</span></span></li><li class=\"col custom b3 ha\"><span class=\"t3\"><span>10</span><span>°</span></span><span>-</span><span class=\"t2\"><span>2</span><span>°</span></span></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span></span></spa"
+    },
+    {
+      "valor": "0 - 2.5",
+      "tag": "LI",
+      "classe": "col custom b3 ha",
+      "textoPai": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "textoAvo": "KAZ Womens Championship 07:00 HT ' Altay Oskemen W 0-4 Zhenys Astana W 0-4 0% - 83% 10° - 2° 0 - 2.5 6.1 6 88% 38% 7.4 8",
+      "htmlPai": "<ul class=\"row fix-19695644\"><li class=\"col fav sticky\"><span class=\"sc-eTtvFv dWDwIp\"><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 576 512\" color=\"#c3c3c3\" class=\"icon-favorite\" height=\"17\" width=\"17\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z\"></path></svg></span></li><li class=\"col add-match sticky\"><span><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 1024 1024\" color=\"#c3c3c3\" height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3-15.4 12.3-16.6 35.4-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 0 0-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8z\"></path></svg></span></li><li class=\"col flag\" title=\"Kazakhstan\"><span class=\"sc-breuTD dmIY\"></span></li><li title=\"Kazakhstan\" class=\"short-country col sticky\">KAZ</li><li title=\"Womens Championship\" class=\"title-league col reduce sticky\"><a href=\"/pt/matches/2616/league/kazakhstan-womens-championship/summary\"><span class=\"clamp1\">Womens Championship</span></a></li><li class=\"col time sticky\"><time datetime=\"1784545200000\">07:00</time></li><li class=\"col blin sticky\"><span class=\"sc-fmGnzW gvXbSq\"><span title=\"Intervalo\" class=\"half-time\">HT</span><small class=\"blink\">'</small></span></li><li class=\"team-name-home col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-home\">Altay Oskemen W</span></a></li><li class=\"result-f col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"sc-aVUuG kmCCXb\">0-4</span></a></li><li class=\"team-name-away col sticky\"><a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"team-away\">Zhenys Astana W</span></a></li><li class=\"col ht-score\"><span>0-4</span></li><li class=\"col custom odds\"></li><li class=\"col custom odds\"></li><li class=\"col custom b0 tt\"></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span>%</span></span><span>-</span><span class=\"t2\"><span>83</span><span>%</span></span></li><li class=\"col custom b3 ha\"><span class=\"t3\"><span>10</span><span>°</span></span><span>-</span><span class=\"t2\"><span>2</span><span>°</span></span></li><li class=\"col custom b3 ha\"><span class=\"t1\"><span>0</span><span></span></spa"
+    },
+    {
+      "valor": "0-4",
+      "tag": "DIV",
+      "classe": "result-tab",
+      "textoPai": "HT ' 0-4",
+      "textoAvo": "HT ' 0-4",
+      "htmlPai": "<a aria-current=\"page\" class=\"active\" href=\"/pt/matches/19695644/match/altay-oskemen-wxzhenys-astana-w/live\"><span class=\"status-tab\"><span class=\"sc-jWquRx Hpwym\"><span title=\"Intervalo\" class=\"half-time\">HT</span><small class=\"blink\">'</small></span></span><div class=\"team-home\"><span><img src=\"https://cdn.sportmonks.com/images/soccer/teams/31/280671.png\" width=\"16\" height=\"16\"></span></div><div class=\"result-tab\">0-4</div><div class=\"team-away\"><span><img src=\"https://cdn.sportmonks.com/images/soccer/team_placeholder.png\" width=\"16\" height=\"16\"></span></div></a>"
+    },
+    {
+      "valor": "0-4",
+      "tag": "SMALL",
+      "classe": "",
+      "textoPai": "HT 0-4",
+      "textoAvo": "HT 0-4 0-4",
+      "htmlPai": "<div class=\"ht-score\" title=\"Resultado do 1º tempo\"><small>HT </small><small>0-4</small></div>"
+    },
+    {
+      "valor": "0-4",
+      "tag": "SPAN",
+      "classe": "",
+      "textoPai": "HT 0-4 0-4",
+      "textoAvo": "20/07/2026 07:00 HT 0-4 0-4 Tempo adicional: 1 min Intervalo '",
+      "htmlPai": "<div class=\"result-game status-3\"><div class=\"ht-score\" title=\"Resultado do 1º tempo\"><small>HT </small><small>0-4</small></div><span>0-4</span><i title=\"Fixar na guia\" class=\"sc-chKnlQ hBedGb\"><svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 384 512\" color=\"#c3c3c3\" height=\"22\" width=\"22\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: rgb(195, 195, 195);\"><path d=\"M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z\"></path></svg></i></div>"
+    },
+    {
+      "valor": "0-4",
+      "tag": "SPAN",
+      "classe": "",
+      "textoPai": "(0-4)",
+      "textoAvo": "LEILA SADYKOVA (0-4) 3rd Goal",
+      "htmlPai": "<strong class=\"result\"><span>&nbsp;(</span><span>0-4</span><span>) </span></strong>"
+    },
+    {
+      "valor": "0-3",
+      "tag": "SPAN",
+      "classe": "",
+      "textoPai": "(0-3)",
+      "textoAvo": "AIGERIM AITYMOVA (Madina Zhanatayeva) (0-3) 2nd Goal",
+      "htmlPai": "<strong class=\"result\"><span>&nbsp;(</span><span>0-3</span><span>) </span></strong>"
+    },
+    {
+      "valor": "0-2",
+      "tag": "SPAN",
+      "classe": "",
+      "textoPai": "(0-2)",
+      "textoAvo": "ADELIYA BEKKOZHINA (0-2) 1st Goal",
+      "htmlPai": "<strong class=\"result\"><span>&nbsp;(</span><span>0-2</span><span>) </span></strong>"
+    },
+    {
+      "valor": "0-1",
+      "tag": "SPAN",
+      "classe": "",
+      "textoPai": "(0-1)",
+      "textoAvo": "MADINA ZHANATAYEVA (0-1) 1st Penalty (Gol de pênalti)",
+      "htmlPai": "<strong class=\"result\"><span>&nbsp;(</span><span>0-1</span><span>) </span></strong>"
+    }
+  ]
+}

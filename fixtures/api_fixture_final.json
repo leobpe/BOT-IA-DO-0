@@ -1,0 +1,18 @@
+{
+  "fixture": {"id": 123, "status": {"short": "FT"}},
+  "goals": {"home": 2, "away": 0},
+  "teams": {
+    "home": {"id": 1, "name": "A"},
+    "away": {"id": 2, "name": "B"}
+  },
+  "statistics": [
+    {
+      "team": {"id": 1},
+      "statistics": [{"type": "Corner Kicks", "value": 6}]
+    },
+    {
+      "team": {"id": 2},
+      "statistics": [{"type": "Corner Kicks", "value": 3}]
+    }
+  ]
+}

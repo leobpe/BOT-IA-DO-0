@@ -1,0 +1,206 @@
+{
+  "url": "https://packball.com/pt/matches/19635712/match/mariehamnxlahti/live",
+  "mandante": "Mariehamn",
+  "visitante": "Lahti",
+  "status": "Intervalo",
+  "placar": "0-0",
+  "chutes": [
+    1,
+    6
+  ],
+  "chutes_no_gol": [
+    0,
+    2
+  ],
+  "pressao": [
+    0,
+    0
+  ],
+  "escanteios": [
+    2,
+    4
+  ],
+  "posse": [
+    34,
+    66
+  ],
+  "cartoes": [
+    0,
+    0
+  ],
+  "chutes_area": [
+    1,
+    3
+  ],
+  "chutes_fora_area": [
+    0,
+    2
+  ],
+  "ataques_perigosos": [
+    8,
+    16
+  ],
+  "ataques": [
+    18,
+    26
+  ],
+  "odds": {
+    "proximo_gol_casa": 3.1,
+    "proximo_gol_fora": 1.44,
+    "sem_outro_gol": null
+  },
+  "pressao_minuto": [
+    {
+      "minuto": 0,
+      "valor": 22
+    },
+    {
+      "minuto": 0,
+      "valor": 22
+    },
+    {
+      "minuto": 1,
+      "valor": 187
+    },
+    {
+      "minuto": 1,
+      "valor": 0
+    },
+    {
+      "minuto": 2,
+      "valor": 121
+    },
+    {
+      "minuto": 2,
+      "valor": 0
+    },
+    {
+      "minuto": 3,
+      "valor": 198
+    },
+    {
+      "minuto": 3,
+      "valor": 0
+    },
+    {
+      "minuto": 4,
+      "valor": 0
+    },
+    {
+      "minuto": 4,
+      "valor": 209
+    },
+    {
+      "minuto": 5,
+      "valor": 0
+    },
+    {
+      "minuto": 5,
+      "valor": 22
+    },
+    {
+      "minuto": 6,
+      "valor": 22
+    },
+    {
+      "minuto": 6,
+      "valor": 132
+    },
+    {
+      "minuto": 7,
+      "valor": 0
+    },
+    {
+      "minuto": 7,
+      "valor": 209
+    },
+    {
+      "minuto": 8,
+      "valor": 132
+    },
+    {
+      "minuto": 8,
+      "valor": 22
+    },
+    {
+      "minuto": 9,
+      "valor": 0
+    },
+    {
+      "minuto": 9,
+      "valor": 110
+    },
+    {
+      "minuto": 10,
+      "valor": 22
+    },
+    {
+      "minuto": 10,
+      "valor": 88
+    },
+    {
+      "minuto": 11,
+      "valor": 0
+    },
+    {
+      "minuto": 11,
+      "valor": 407
+    },
+    {
+      "minuto": 12,
+      "valor": 66
+    },
+    {
+      "minuto": 12,
+      "valor": 176
+    },
+    {
+      "minuto": 13,
+      "valor": 0
+    },
+    {
+      "minuto": 13,
+      "valor": 165
+    },
+    {
+      "minuto": 14,
+      "valor": 0
+    },
+    {
+      "minuto": 14,
+      "valor": 22
+    },
+    {
+      "minuto": 15,
+      "valor": 22
+    },
+    {
+      "minuto": 15,
+      "valor": 88
+    },
+    {
+      "minuto": 16,
+      "valor": 0
+    },
+    {
+      "minuto": 16,
+      "valor": 121
+    },
+    {
+      "minuto": 17,
+      "valor": 44
+    },
+    {
+      "minuto": 17,
+      "valor": 66
+    },
+    {
+      "minuto": 18,
+      "valor": 66
+    },
+    {
+      "minuto": 18,
+      "valor": 0
+    }
+  ]
+}

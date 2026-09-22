@@ -1,0 +1,469 @@
+{
+  "versao": "avaliacao-quarentena-fallback-ht-prospectiva-v3",
+  "custodia_execucao_versao": "custodia-execucao-avaliacao-v3",
+  "estado_execucao": "concluida",
+  "modo": "avaliacao_prospectiva_silenciosa",
+  "ancora_prospectiva_em": "2026-09-10T00:04:56",
+  "ancora_metodologia_v2_pre_registrada": true,
+  "politica_versao": "fallback-api-ht-linhas-altas-quarentena-v1",
+  "regra_versao_alvo": "sinais-v8c-gol-ht-principal-sombra-prospectiva-100",
+  "status_coorte": "simulacao",
+  "politica_operacional_ativa": true,
+  "criterio_independencia": "primeiro_candidato_elegivel_por_partida_antes_do_resultado;_partida_nao_pode_entrar_nos_dois_bracos",
+  "auditoria_independencia": {
+    "candidatos_elegiveis": 2,
+    "unidades_independentes": 2,
+    "duplicados_posteriores": 0,
+    "trocas_grupo_posteriores": 0,
+    "selecao_antes_do_resultado": true,
+    "chave_independencia": "partida_id"
+  },
+  "coortes_observadas_diagnostico": {
+    "controle_ht_0_5|sinais-v8b-gol-ht-max28|simulacao": 7,
+    "controle_ht_0_5|sinais-v8c-gol-ht-principal-sombra-prospectiva-100|simulacao": 2,
+    "quarentena_linhas_altas|sinais-v8b-gol-ht-max28|simulacao": 1
+  },
+  "baseline_retrospectiva": {
+    "candidatos_independentes": 8,
+    "jogos_distintos": 8,
+    "resultados": 5,
+    "resultados_direcionais": 5,
+    "pendentes": 3,
+    "resultados_completos_e_validos": false,
+    "auditoria_resultados": {
+      "unidades": 8,
+      "validas": 5,
+      "pendentes_ou_invalidas": 3,
+      "resultados_completos_e_validos": false,
+      "motivos": {
+        "resultado_ausente": 3
+      },
+      "selecao_antes_do_resultado": true
+    },
+    "greens": 0,
+    "reds": 5,
+    "voids": 0,
+    "taxa_green": 0.0,
+    "ic95_taxa_green": [
+      0.0,
+      0.4345
+    ],
+    "odd_media": 1.7152,
+    "taxa_break_even_media": 0.5974,
+    "edge_taxa_vs_break_even": -0.5974,
+    "retorno_unidades": -5.0,
+    "roi": -1.0,
+    "ic95_roi": [
+      -1.0,
+      -1.0
+    ],
+    "por_linha": {
+      "1.5": 7,
+      "2.5": 1
+    },
+    "por_status": {
+      "aprovado": 2,
+      "simulacao": 3,
+      "rejeitado": 3
+    },
+    "por_regra_versao": {
+      "sinais-v8b-gol-ht-max28": 8
+    }
+  },
+  "baseline_retrospectiva_entra_na_decisao": false,
+  "auditoria_baseline": {
+    "candidatos_elegiveis": 12,
+    "unidades_independentes": 8,
+    "duplicados_posteriores": 4,
+    "trocas_grupo_posteriores": 0,
+    "selecao_antes_do_resultado": true,
+    "chave_independencia": "partida_id"
+  },
+  "por_grupo": {
+    "quarentena_linhas_altas": {
+      "candidatos_independentes": 0,
+      "jogos_distintos": 0,
+      "resultados": 0,
+      "resultados_direcionais": 0,
+      "pendentes": 0,
+      "resultados_completos_e_validos": true,
+      "auditoria_resultados": {
+        "unidades": 0,
+        "validas": 0,
+        "pendentes_ou_invalidas": 0,
+        "resultados_completos_e_validos": true,
+        "motivos": {},
+        "selecao_antes_do_resultado": true
+      },
+      "greens": 0,
+      "reds": 0,
+      "voids": 0,
+      "taxa_green": null,
+      "ic95_taxa_green": null,
+      "odd_media": null,
+      "taxa_break_even_media": null,
+      "edge_taxa_vs_break_even": null,
+      "retorno_unidades": 0,
+      "roi": null,
+      "ic95_roi": null,
+      "por_linha": {},
+      "por_status": {},
+      "por_regra_versao": {}
+    },
+    "controle_ht_0_5": {
+      "candidatos_independentes": 2,
+      "jogos_distintos": 2,
+      "resultados": 2,
+      "resultados_direcionais": 2,
+      "pendentes": 0,
+      "resultados_completos_e_validos": true,
+      "auditoria_resultados": {
+        "unidades": 2,
+        "validas": 2,
+        "pendentes_ou_invalidas": 0,
+        "resultados_completos_e_validos": true,
+        "motivos": {},
+        "selecao_antes_do_resultado": true
+      },
+      "greens": 1,
+      "reds": 1,
+      "voids": 0,
+      "taxa_green": 0.5,
+      "ic95_taxa_green": [
+        0.0945,
+        0.9055
+      ],
+      "odd_media": 1.5357,
+      "taxa_break_even_media": 0.6515,
+      "edge_taxa_vs_break_even": -0.1515,
+      "retorno_unidades": -0.4286,
+      "roi": -0.2143,
+      "ic95_roi": [
+        -1.7543,
+        1.3257
+      ],
+      "por_linha": {
+        "0.5": 2
+      },
+      "por_status": {
+        "simulacao": 2
+      },
+      "por_regra_versao": {
+        "sinais-v8c-gol-ht-principal-sombra-prospectiva-100": 2
+      }
+    }
+  },
+  "por_grupo_todas_independentes_diagnostico": {
+    "quarentena_linhas_altas": {
+      "candidatos_independentes": 0,
+      "jogos_distintos": 0,
+      "resultados": 0,
+      "resultados_direcionais": 0,
+      "pendentes": 0,
+      "resultados_completos_e_validos": true,
+      "auditoria_resultados": {
+        "unidades": 0,
+        "validas": 0,
+        "pendentes_ou_invalidas": 0,
+        "resultados_completos_e_validos": true,
+        "motivos": {},
+        "selecao_antes_do_resultado": true
+      },
+      "greens": 0,
+      "reds": 0,
+      "voids": 0,
+      "taxa_green": null,
+      "ic95_taxa_green": null,
+      "odd_media": null,
+      "taxa_break_even_media": null,
+      "edge_taxa_vs_break_even": null,
+      "retorno_unidades": 0,
+      "roi": null,
+      "ic95_roi": null,
+      "por_linha": {},
+      "por_status": {},
+      "por_regra_versao": {}
+    },
+    "controle_ht_0_5": {
+      "candidatos_independentes": 2,
+      "jogos_distintos": 2,
+      "resultados": 2,
+      "resultados_direcionais": 2,
+      "pendentes": 0,
+      "resultados_completos_e_validos": true,
+      "auditoria_resultados": {
+        "unidades": 2,
+        "validas": 2,
+        "pendentes_ou_invalidas": 0,
+        "resultados_completos_e_validos": true,
+        "motivos": {},
+        "selecao_antes_do_resultado": true
+      },
+      "greens": 1,
+      "reds": 1,
+      "voids": 0,
+      "taxa_green": 0.5,
+      "ic95_taxa_green": [
+        0.0945,
+        0.9055
+      ],
+      "odd_media": 1.5357,
+      "taxa_break_even_media": 0.6515,
+      "edge_taxa_vs_break_even": -0.1515,
+      "retorno_unidades": -0.4286,
+      "roi": -0.2143,
+      "ic95_roi": [
+        -1.7543,
+        1.3257
+      ],
+      "por_linha": {
+        "0.5": 2
+      },
+      "por_status": {
+        "simulacao": 2
+      },
+      "por_regra_versao": {
+        "sinais-v8c-gol-ht-principal-sombra-prospectiva-100": 2
+      }
+    }
+  },
+  "cronologia_por_grupo": {
+    "quarentena_linhas_altas": {
+      "desenvolvimento_70": {
+        "candidatos_independentes": 0,
+        "jogos_distintos": 0,
+        "resultados": 0,
+        "resultados_direcionais": 0,
+        "pendentes": 0,
+        "resultados_completos_e_validos": true,
+        "auditoria_resultados": {
+          "unidades": 0,
+          "validas": 0,
+          "pendentes_ou_invalidas": 0,
+          "resultados_completos_e_validos": true,
+          "motivos": {},
+          "selecao_antes_do_resultado": true
+        },
+        "greens": 0,
+        "reds": 0,
+        "voids": 0,
+        "taxa_green": null,
+        "ic95_taxa_green": null,
+        "odd_media": null,
+        "taxa_break_even_media": null,
+        "edge_taxa_vs_break_even": null,
+        "retorno_unidades": 0,
+        "roi": null,
+        "ic95_roi": null,
+        "por_linha": {},
+        "por_status": {},
+        "por_regra_versao": {}
+      },
+      "holdout_30": {
+        "candidatos_independentes": 0,
+        "jogos_distintos": 0,
+        "resultados": 0,
+        "resultados_direcionais": 0,
+        "pendentes": 0,
+        "resultados_completos_e_validos": true,
+        "auditoria_resultados": {
+          "unidades": 0,
+          "validas": 0,
+          "pendentes_ou_invalidas": 0,
+          "resultados_completos_e_validos": true,
+          "motivos": {},
+          "selecao_antes_do_resultado": true
+        },
+        "greens": 0,
+        "reds": 0,
+        "voids": 0,
+        "taxa_green": null,
+        "ic95_taxa_green": null,
+        "odd_media": null,
+        "taxa_break_even_media": null,
+        "edge_taxa_vs_break_even": null,
+        "retorno_unidades": 0,
+        "roi": null,
+        "ic95_roi": null,
+        "por_linha": {},
+        "por_status": {},
+        "por_regra_versao": {}
+      }
+    },
+    "controle_ht_0_5": {
+      "desenvolvimento_70": {
+        "candidatos_independentes": 2,
+        "jogos_distintos": 2,
+        "resultados": 2,
+        "resultados_direcionais": 2,
+        "pendentes": 0,
+        "resultados_completos_e_validos": true,
+        "auditoria_resultados": {
+          "unidades": 2,
+          "validas": 2,
+          "pendentes_ou_invalidas": 0,
+          "resultados_completos_e_validos": true,
+          "motivos": {},
+          "selecao_antes_do_resultado": true
+        },
+        "greens": 1,
+        "reds": 1,
+        "voids": 0,
+        "taxa_green": 0.5,
+        "ic95_taxa_green": [
+          0.0945,
+          0.9055
+        ],
+        "odd_media": 1.5357,
+        "taxa_break_even_media": 0.6515,
+        "edge_taxa_vs_break_even": -0.1515,
+        "retorno_unidades": -0.4286,
+        "roi": -0.2143,
+        "ic95_roi": [
+          -1.7543,
+          1.3257
+        ],
+        "por_linha": {
+          "0.5": 2
+        },
+        "por_status": {
+          "simulacao": 2
+        },
+        "por_regra_versao": {
+          "sinais-v8c-gol-ht-principal-sombra-prospectiva-100": 2
+        }
+      },
+      "holdout_30": {
+        "candidatos_independentes": 0,
+        "jogos_distintos": 0,
+        "resultados": 0,
+        "resultados_direcionais": 0,
+        "pendentes": 0,
+        "resultados_completos_e_validos": true,
+        "auditoria_resultados": {
+          "unidades": 0,
+          "validas": 0,
+          "pendentes_ou_invalidas": 0,
+          "resultados_completos_e_validos": true,
+          "motivos": {},
+          "selecao_antes_do_resultado": true
+        },
+        "greens": 0,
+        "reds": 0,
+        "voids": 0,
+        "taxa_green": null,
+        "ic95_taxa_green": null,
+        "odd_media": null,
+        "taxa_break_even_media": null,
+        "edge_taxa_vs_break_even": null,
+        "retorno_unidades": 0,
+        "roi": null,
+        "ic95_roi": null,
+        "por_linha": {},
+        "por_status": {},
+        "por_regra_versao": {}
+      }
+    }
+  },
+  "auditoria_por_grupo": {
+    "quarentena_linhas_altas": {
+      "unidades_independentes": 0,
+      "unidades_coorte_fixa": 0,
+      "unidades_pos_coorte_fixa_somente_diagnostico": 0,
+      "coorte_fechada": false,
+      "particao_definida_antes_do_resultado": true,
+      "unidades_desenvolvimento": 0,
+      "unidades_holdout": 0
+    },
+    "controle_ht_0_5": {
+      "unidades_independentes": 2,
+      "unidades_coorte_fixa": 2,
+      "unidades_pos_coorte_fixa_somente_diagnostico": 0,
+      "coorte_fechada": false,
+      "particao_definida_antes_do_resultado": true,
+      "unidades_desenvolvimento": 2,
+      "unidades_holdout": 0
+    }
+  },
+  "delta_roi_quarentena_vs_controle": null,
+  "ic95_conservador_delta_roi": null,
+  "pronto_para_revisao": false,
+  "vantagem_linhas_altas_comprovada": false,
+  "prejuizo_linhas_altas_comprovado": false,
+  "faltam_resultados_quarentena": 100,
+  "faltam_jogos_quarentena": 100,
+  "faltam_resultados_controle": 98,
+  "avaliacao_altera_sinais": false,
+  "aplicacao_sinais": false,
+  "telegram": false,
+  "reativacao_automatica": false,
+  "rollback": "PROTECAO_TENDENCIAS_PACKBALL_FALLBACK_API_HT_LINHAS_ALTAS_ATIVO=1",
+  "recomendacao": "continuar_coleta_prospectiva",
+  "exposicao_coleta_prospectiva": {
+    "versao": "exposicao-coleta-prospectiva-v2",
+    "estado": "exposicao_observada",
+    "saudavel": true,
+    "fonte": "monitor_eventos.jsonl",
+    "linhas_lidas": 970,
+    "linhas_invalidas": 0,
+    "erro": null,
+    "coortes": 1,
+    "coortes_com_exposicao": 1,
+    "coortes_sem_exposicao_por_manutencao": 0,
+    "requer_atencao": false,
+    "por_coorte": {
+      "principal": {
+        "versao": "exposicao-coleta-prospectiva-v2",
+        "estado": "exposicao_observada",
+        "saudavel": true,
+        "ancora": "2026-09-10T00:04:56",
+        "agora": "2026-09-13T00:45:05.550668",
+        "idade_parede_horas": 72.669,
+        "idade_operacional_horas": 68.741,
+        "exposicao_operacional_confirmada_horas": 3.106,
+        "cobertura_telemetria_desde_ancora": false,
+        "lacuna_operacional_antes_da_telemetria_horas": 65.571,
+        "manutencao_excluida_horas": 3.928,
+        "pausas_manutencao_apos_ancora": 18,
+        "relogio_amostra_iniciou": true,
+        "esperado_sem_dados": false,
+        "requer_atencao": false,
+        "manutencao_ativa": false,
+        "manutencao_confiavel": true,
+        "manutencao_solicitada_em": null,
+        "ancora_durante_manutencao": false,
+        "ciclos_concluidos": 40,
+        "ciclos_falhos": 0,
+        "ciclos_com_partidas": 40,
+        "partidas_somadas": 1152,
+        "tarefas_processadas": 280,
+        "duracao_processamento_confirmada_segundos": 7851.865,
+        "comparacoes_fontes_odds": 280,
+        "betsapi_partidas_pareadas": 242,
+        "betsapi_partidas_consultadas": 242,
+        "betsapi_mercados_anexados": 693,
+        "primeiro_ciclo_em": "2026-09-12T17:43:00",
+        "ultimo_ciclo_em": "2026-09-13T00:26:17",
+        "aplicacao_sinais": false,
+        "altera_calibracao": false,
+        "altera_prioridade": false,
+        "promocao_automatica": false,
+        "reativacao_automatica": false,
+        "telegram": false
+      }
+    },
+    "aplicacao_sinais": false,
+    "altera_calibracao": false,
+    "altera_prioridade": false,
+    "promocao_automatica": false,
+    "reativacao_automatica": false,
+    "telegram": false
+  },
+  "altera_calibracao": false,
+  "altera_prioridade": false,
+  "promocao_automatica": false,
+  "iniciado_em": "2026-09-13T00:45:04",
+  "finalizado_em": "2026-09-13T00:45:05",
+  "atualizado_em": "2026-09-13T00:45:05",
+  "duracao_segundos": 1.037
+}
