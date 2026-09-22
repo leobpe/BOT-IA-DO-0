@@ -248,6 +248,19 @@ def _recorte_referencia_pos_envio_teste():
 
 
 class WatchdogTest(unittest.TestCase):
+    def _caminho_pre_live_preciso_isolado(self):
+        """Impede que executar_verificacao grave no estado real do projeto.
+
+        O circuit breaker do pre-live cai em ARQUIVO_ESTADO_PRE_LIVE_PRECISO
+        quando nenhum caminho e informado. Sem isolar, a suite deixava um
+        pre_live_preciso_estado.json suspenso na pasta e contaminava as
+        execucoes seguintes.
+        """
+        caminho = Path.cwd() / f".teste_pre_live_preciso_{id(self):x}.json"
+        caminho.unlink(missing_ok=True)
+        self.addCleanup(caminho.unlink, missing_ok=True)
+        return caminho
+
     def setUp(self):
         self.ambiente_teste = patch.dict(
             os.environ,
@@ -844,6 +857,9 @@ class WatchdogTest(unittest.TestCase):
         ), patch(
             "watchdog.gravar_json_atomico", gravar,
         ), patch(
+            "watchdog.ARQUIVO_ESTADO_PRE_LIVE_PRECISO",
+            self._caminho_pre_live_preciso_isolado(),
+        ), patch(
             "watchdog.verificar_validacao"
         ) as validar:
             estado = executar_verificacao()
@@ -896,6 +912,9 @@ class WatchdogTest(unittest.TestCase):
             "watchdog.gravar_json_atomico", gravar,
         ), patch(
             "watchdog.persistir_estado_watchdog_sqlite", persistir,
+        ), patch(
+            "watchdog.ARQUIVO_ESTADO_PRE_LIVE_PRECISO",
+            self._caminho_pre_live_preciso_isolado(),
         ), patch(
             "watchdog.persistir_conclusao_experimento_filtro",
             side_effect=RuntimeError("falha posterior"),
@@ -5635,6 +5654,16 @@ class WatchdogTest(unittest.TestCase):
         )
 
     def test_partida_a_frio_nao_envia_alerta_antes_do_primeiro_ciclo(self):
+        # Sem coorte pre-live, o breaker dispara o proprio alerta de
+        # suspensao e poluiria a asercao. O assunto deste teste e o alerta
+        # de partida a frio. Fica fora do "with" abaixo porque a cadeia ja
+        # esta no limite de blocos aninhados do Python.
+        breaker_pre_live = patch(
+            "watchdog.atualizar_alerta_circuit_breaker_pre_live_preciso",
+            side_effect=lambda estado, anterior=None, enviar=None: estado,
+        )
+        breaker_pre_live.start()
+        self.addCleanup(breaker_pre_live.stop)
         estado_temporario = Path.cwd() / ".teste_watchdog_estado.json"
         estado_temporario.unlink(missing_ok=True)
         recuperacao_temporaria = (
@@ -5769,6 +5798,9 @@ class WatchdogTest(unittest.TestCase):
                 return_value={"saudavel": True, "motivos": []},
             ), patch(
                 "watchdog.enviar_alerta", enviar
+            ), patch(
+                "watchdog.ARQUIVO_ESTADO_PRE_LIVE_PRECISO",
+                self._caminho_pre_live_preciso_isolado(),
             ), patch.dict(
                 "os.environ", {"WATCHDOG_REINICIO_AUTOMATICO": "0"}
             ):

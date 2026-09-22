@@ -1,0 +1,17 @@
+# Fim de linha normalizado para LF em todo checkout.
+#
+# A assinatura de runtime (processo_monitor.ARQUIVOS_RUNTIME) e as linhagens
+# de regra somam o SHA-256 dos BYTES dos arquivos-fonte. Sem esta
+# normalizacao, um clone em Windows recebe CRLF e produz hashes diferentes
+# dos da maquina de origem, quebrando a verificacao de integridade e os
+# testes que dependem dela.
+* text=auto eol=lf
+
+# Scripts do Windows continuam com CRLF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binarios nunca sao convertidos.
+*.png binary
+*.db binary
+*.gz binary
