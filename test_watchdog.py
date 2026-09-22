@@ -248,6 +248,19 @@ def _recorte_referencia_pos_envio_teste():
 
 
 class WatchdogTest(unittest.TestCase):
+    def _caminho_pre_live_preciso_isolado(self):
+        """Impede que executar_verificacao grave no estado real do projeto.
+
+        O circuit breaker do pre-live cai em ARQUIVO_ESTADO_PRE_LIVE_PRECISO
+        quando nenhum caminho e informado. Sem isolar, a suite deixava um
+        pre_live_preciso_estado.json suspenso na pasta e contaminava as
+        execucoes seguintes.
+        """
+        caminho = Path.cwd() / f".teste_pre_live_preciso_{id(self):x}.json"
+        caminho.unlink(missing_ok=True)
+        self.addCleanup(caminho.unlink, missing_ok=True)
+        return caminho
+
     def setUp(self):
         self.ambiente_teste = patch.dict(
             os.environ,
@@ -844,6 +857,9 @@ class WatchdogTest(unittest.TestCase):
         ), patch(
             "watchdog.gravar_json_atomico", gravar,
         ), patch(
+            "watchdog.ARQUIVO_ESTADO_PRE_LIVE_PRECISO",
+            self._caminho_pre_live_preciso_isolado(),
+        ), patch(
             "watchdog.verificar_validacao"
         ) as validar:
             estado = executar_verificacao()
@@ -896,6 +912,9 @@ class WatchdogTest(unittest.TestCase):
             "watchdog.gravar_json_atomico", gravar,
         ), patch(
             "watchdog.persistir_estado_watchdog_sqlite", persistir,
+        ), patch(
+            "watchdog.ARQUIVO_ESTADO_PRE_LIVE_PRECISO",
+            self._caminho_pre_live_preciso_isolado(),
         ), patch(
             "watchdog.persistir_conclusao_experimento_filtro",
             side_effect=RuntimeError("falha posterior"),
@@ -5769,6 +5788,9 @@ class WatchdogTest(unittest.TestCase):
                 return_value={"saudavel": True, "motivos": []},
             ), patch(
                 "watchdog.enviar_alerta", enviar
+            ), patch(
+                "watchdog.ARQUIVO_ESTADO_PRE_LIVE_PRECISO",
+                self._caminho_pre_live_preciso_isolado(),
             ), patch.dict(
                 "os.environ", {"WATCHDOG_REINICIO_AUTOMATICO": "0"}
             ):
