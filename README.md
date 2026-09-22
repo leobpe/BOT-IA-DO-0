@@ -73,7 +73,7 @@ PackBall / fontes auxiliares
 No PowerShell, entre na pasta do projeto e crie o ambiente isolado:
 
 ```powershell
-cd "C:\Users\Leonardo\Documents\BOT IA DO 0"
+cd "C:\caminho\para\BOT IA DO 0"
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.lock.txt
 .\.venv\Scripts\python.exe -m playwright install msedge
@@ -138,7 +138,7 @@ O sistema está configurado para ser iniciado manualmente. Para iniciar monitor
 e watchdog depois de uma pausa planejada:
 
 ```powershell
-cd "C:\Users\Leonardo\Documents\BOT IA DO 0"
+cd "C:\caminho\para\BOT IA DO 0"
 .\.venv\Scripts\python.exe .\iniciar_sistema.py --retomar-manutencao
 ```
 
