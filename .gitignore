@@ -33,3 +33,17 @@ bot_comandos_processo.json
 modo_manutencao.json
 autostart_ultima_execucao.json
 manifesto_transferencia.json
+
+# Estados de execucao, travas e temporarios gerados pelo runtime.
+# Sao locais de cada maquina: versiona-los gera conflito e ruido de PID.
+*.lock
+*.tmp
+*.bak
+*_estado.json
+*_processo.json
+*_uso.json
+monitor_odds_rapidas_eventos.jsonl
+monitor_odds_rapidas_eventos.jsonl.*
+packball_experimento_ritmo.json
+monitor_lancamento.json
+pre_live_agenda.json
