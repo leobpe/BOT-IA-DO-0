@@ -66,7 +66,8 @@ PackBall / fontes auxiliares
 - Conta com acesso válido ao PackBall.
 - Um bot e um chat/canal do Telegram para receber alertas.
 - Chave da API-Football se quiser usar os recursos que dependem dela.
-- Internet e Microsoft Edge, usado pelo Playwright.
+- Internet e Google Chrome. O monitor e o login do PackBall abrem o Chrome
+  pelo Playwright; alguns scripts de diagnóstico usam o Microsoft Edge.
 
 ## Instalação
 
@@ -76,7 +77,7 @@ No PowerShell, entre na pasta do projeto e crie o ambiente isolado:
 cd "C:\caminho\para\BOT IA DO 0"
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.lock.txt
-.\.venv\Scripts\python.exe -m playwright install msedge
+.\.venv\Scripts\python.exe -m playwright install chrome
 ```
 
 O arquivo `requirements.lock.txt` fixa as versões validadas do ambiente. Evite
@@ -157,6 +158,13 @@ Para uma coleta única de diagnóstico, sem abrir navegador visível:
 .\.venv\Scripts\python.exe .\monitor_ao_vivo.py --uma-vez --headless
 ```
 
+Para abrir a janela operacional em modo de configuração, sem que o monitor
+analise partidas enquanto você ajusta o Scanner e as colunas:
+
+```powershell
+.\.venv\Scripts\python.exe .\monitor_ao_vivo.py --configurar-packball
+```
+
 ## Consultar o estado
 
 ```powershell
@@ -212,9 +220,11 @@ Antes de alterar regras operacionais ou iniciar uma nova versão, execute:
 .\.venv\Scripts\python.exe .\preflight_reinicio.py
 ```
 
-Os testes são offline e cobrem componentes como coleta, regras, armazenamento,
-calibração, envio e liquidação simulada. O pré-voo é uma verificação de
-segurança: uma recusa precisa ser investigada antes de retomar a operação.
+São cerca de 2.770 testes e a suíte leva perto de 100 segundos, então é
+normal ela parecer parada por um tempo. Os testes são offline e cobrem
+componentes como coleta, regras, armazenamento, calibração, envio e
+liquidação simulada. O pré-voo é uma verificação de segurança: uma recusa
+precisa ser investigada antes de retomar a operação.
 
 ## Estrutura principal
 
@@ -246,37 +256,38 @@ Depois de configurar o token e iniciar o bot de comandos, os comandos mais
 - `/chatid` — mostra o ID do chat atual;
 - `/ajuda` — mostra os comandos disponíveis.
 
-## Publicar no GitHub
+## Enviar alterações ao GitHub
 
-O aviso mostrado no VS Code — `Make sure you configure your "user.name" and
-"user.email" in git` — significa apenas que o Git ainda não sabe qual nome e
-e-mail registrar nos commits. Execute uma vez no PowerShell, substituindo pelos
-seus dados (de preferência o e-mail vinculado ao GitHub):
+O repositório fica em `leobpe/BOT-IA-DO-0`, com o remoto chamado `leo-bot`.
+Confira se o Git sabe quem você é — isso só precisa ser feito uma vez:
 
 ```powershell
 git config --global user.name "Seu Nome"
 git config --global user.email "seu-email@exemplo.com"
 ```
 
-Confira:
+Toda alteração deve ir numa branch própria, nunca direto na `main`:
 
 ```powershell
-git config --global --get user.name
-git config --global --get user.email
-```
-
-Em seguida, dentro desta pasta:
-
-```powershell
+git checkout -b tipo/descricao-curta
 git status
-git add .
-git commit -m "Documenta o projeto PackBall"
+git add <apenas os arquivos da mudança>
+git commit -m "Mensagem no imperativo"
+git push -u leo-bot tipo/descricao-curta
 ```
 
-No VS Code, depois disso, o botão **Commit** deve funcionar. Para enviar ao
-GitHub, publique o repositório pelo painel de Controle de Código-Fonte ou
-configure um remoto do seu repositório privado. Nunca coloque token, senha ou
-o conteúdo do `.env` no README, no commit ou em uma mensagem.
+Prefira `git add` com os arquivos nomeados a `git add .`: a pasta acumula
+estados de execução, locks e arquivos temporários que não devem ser versionados.
+
+Para abrir o pull request pelo terminal, com o GitHub CLI autenticado
+(`gh auth login`):
+
+```powershell
+gh pr create --base main --title "Título do PR" --body "O que muda e por quê"
+```
+
+Antes de qualquer envio, rode a suíte de testes. E nunca coloque token, senha ou
+o conteúdo do `.env` no README, num commit ou numa mensagem.
 
 ## Documentação adicional
 
