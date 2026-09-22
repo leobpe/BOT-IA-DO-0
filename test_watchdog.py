@@ -5654,6 +5654,16 @@ class WatchdogTest(unittest.TestCase):
         )
 
     def test_partida_a_frio_nao_envia_alerta_antes_do_primeiro_ciclo(self):
+        # Sem coorte pre-live, o breaker dispara o proprio alerta de
+        # suspensao e poluiria a asercao. O assunto deste teste e o alerta
+        # de partida a frio. Fica fora do "with" abaixo porque a cadeia ja
+        # esta no limite de blocos aninhados do Python.
+        breaker_pre_live = patch(
+            "watchdog.atualizar_alerta_circuit_breaker_pre_live_preciso",
+            side_effect=lambda estado, anterior=None, enviar=None: estado,
+        )
+        breaker_pre_live.start()
+        self.addCleanup(breaker_pre_live.stop)
         estado_temporario = Path.cwd() / ".teste_watchdog_estado.json"
         estado_temporario.unlink(missing_ok=True)
         recuperacao_temporaria = (
