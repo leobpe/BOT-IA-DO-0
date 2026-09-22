@@ -247,6 +247,7 @@ ARQUIVOS_RUNTIME_WATCHDOG = (
     "validacao_escanteios_ft_asiatico_executavel.py",
     "watchdog.py",
     "watchdog_avaliacoes.py",
+    "watchdog_auditorias.py",
     "watchdog_coleta.py",
 )
 
