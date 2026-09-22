@@ -1,13 +1,11 @@
 import hashlib
 import json
-import math
 import os
 import shutil
 import sqlite3
 import sys
 import time
 from datetime import datetime, timedelta
-from functools import wraps
 from pathlib import Path
 from statistics import median
 from urllib.parse import urlencode
@@ -35,51 +33,6 @@ from avaliacao_contexto import (
     registrar_historico_avaliacao_contexto,
     registrar_ou_obter_ancoras_contexto,
 )
-from avaliacao_acompanhamento_odd import (
-    VERSAO as VERSAO_AVALIACAO_ACOMPANHAMENTO_ODD,
-)
-from avaliacao_desajuste_odds import (
-    BOOKMAKER_EXECUTAVEL as BOOKMAKER_DESAJUSTE_ODDS,
-    MOTIVO_FALHA_EXECUCAO as MOTIVO_FALHA_EXECUCAO_DESAJUSTE,
-    ORIGENS_FONTES_OBSERVACIONAIS,
-    VERSAO as VERSAO_AVALIACAO_DESAJUSTE_ODDS,
-    VERSAO_CONVERGENCIA_PRECO,
-    VERSAO_EDGE_SEM_VIG,
-    VERSAO_FONTES_OBSERVACIONAIS,
-    VERSAO_LIQUIDACAO_EDGE_SEM_VIG,
-    MERCADOS_LIQUIDAVEIS_EDGE_SEM_VIG,
-    TAMANHO_COORTE_EDGE_SEM_VIG,
-    RESULTADOS_EDGE_SEM_VIG_MINIMOS,
-    RESULTADOS_EDGE_SEM_VIG_DEV_MINIMOS,
-    RESULTADOS_EDGE_SEM_VIG_HOLDOUT_MINIMOS,
-    DESENVOLVIMENTO_REFERENCIA_POS_ENVIO,
-    HOLDOUT_REFERENCIA_POS_ENVIO,
-    MERCADOS_REFERENCIA_POS_ENVIO,
-    RESULTADOS_CONTROLE_REFERENCIA_POS_ENVIO_MINIMOS,
-    RESULTADOS_REFERENCIA_POS_ENVIO_DEV_MINIMOS,
-    RESULTADOS_REFERENCIA_POS_ENVIO_HOLDOUT_MINIMOS,
-    RESULTADOS_REFERENCIA_POS_ENVIO_MINIMOS,
-    TAMANHO_COORTE_REFERENCIA_POS_ENVIO,
-    VERSAO_REFERENCIA_POS_ENVIO,
-)
-from desajuste_odds import VERSAO as VERSAO_COMPARACAO_ODDS
-from avaliacao_quarentena_fallback_ht import (
-    REGRA_VERSAO_ALVO as REGRA_VERSAO_QUARENTENA_FALLBACK_HT,
-    STATUS_COORTE as STATUS_COORTE_QUARENTENA_FALLBACK_HT,
-    VERSAO as VERSAO_AVALIACAO_QUARENTENA_FALLBACK_HT,
-)
-from avaliacao_prioridade_ligas_gols import (
-    VERSAO as VERSAO_AVALIACAO_PRIORIDADE_LIGAS_GOLS,
-)
-from avaliacao_probabilidade_individual import (
-    ERRO_CALIBRACAO_MAXIMO as ERRO_CALIBRACAO_PROBABILIDADE_INDIVIDUAL,
-    RESULTADOS_DESENVOLVIMENTO_MINIMOS as RESULTADOS_DEV_PROBABILIDADE_INDIVIDUAL,
-    RESULTADOS_HOLDOUT_MINIMOS as RESULTADOS_HOLDOUT_PROBABILIDADE_INDIVIDUAL,
-    RESULTADOS_MINIMOS as RESULTADOS_PROBABILIDADE_INDIVIDUAL,
-    TAMANHO_COORTE as TAMANHO_COORTE_PROBABILIDADE_INDIVIDUAL,
-    VERSAO as VERSAO_AVALIACAO_PROBABILIDADE_INDIVIDUAL,
-    VERSAO_MODELO as VERSAO_MODELO_PROBABILIDADE_INDIVIDUAL,
-)
 from banco import (
     auditar_historico_drift_simulacoes,
     registrar_historico_drift_simulacoes,
@@ -102,16 +55,6 @@ from controle_acesso_packball import (
     verificar_acesso_packball,
 )
 from controle_sistema import ler_modo_manutencao, solicitar_modo_manutencao
-from custodia_avaliacao import (
-    EFEITOS_DESATIVADOS as EFEITOS_DESATIVADOS_AVALIACAO,
-    ESTADO_CONCLUIDO as ESTADO_AVALIACAO_CONCLUIDO,
-    LIMITE_EXECUCAO_SEGUNDOS as LIMITE_EXECUCAO_AVALIACAO_SEGUNDOS,
-    VERSAO_CUSTODIA as VERSAO_CUSTODIA_AVALIACAO,
-    aplicar_efeitos_desativados,
-    auditar_cronologia_execucao,
-    auditar_efeitos_desativados,
-    classificar_execucao,
-)
 from controle_gols_antecipados import (
     ler_estado as ler_estado_gols_antecipados,
     metodo_liberado as metodo_gol_antecipado_liberado,
@@ -223,9 +166,7 @@ from integridade_resultados import auditar_proveniencia_resultados
 from valor_mercado import auditar_valor_mercado_sinais
 from integridade_calibracao import (
     auditar_diversidade_amostra_calibracao,
-    auditar_frescor_calibracoes,
     auditar_frescor_calibracoes_por_mercado,
-    auditar_particoes_calibracao,
     auditar_particoes_calibracao_por_mercado,
 )
 from mercados import (
@@ -273,10 +214,9 @@ from pontuacao_longa_sombra import (
 from relatorio_odds_periodos import resumir_odds_escanteios_periodos
 from relatorio_simulacoes import (
     auditar_experimento_filtro,
-    avaliar_drift_simulacoes,
     avaliar_drift_simulacoes_por_mercado,
-    comparar_filtros_por_mercado,
     comparar_filtro_simulacoes,
+    comparar_filtros_por_mercado,
     obter_conclusao_experimento_filtro,
     registrar_ou_obter_conclusao_experimento_filtro,
 )
@@ -285,8 +225,6 @@ from validacao_pre_live_preciso import (
     resumir_validacao_pre_live_preciso_arquivo,
 )
 from watchdog_avaliacoes import (
-    _bloqueio_custodia_avaliacao,
-    _resposta_avaliacao_observacional,
     verificar_avaliacao_acompanhamento_odd,
     verificar_avaliacao_desajuste_odds,
     verificar_avaliacao_prioridade_ligas_gols,
