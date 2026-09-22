@@ -114,6 +114,27 @@ class TransferirProjetoTest(unittest.TestCase):
         self.assertEqual(gravado["versao"], "transferencia-packball-v2")
         self.assertGreater(gravado["total_arquivos"], 0)
 
+    def test_pacote_exclui_arquivos_residuais(self):
+        (self.origem / "=").write_text("", encoding="utf-8")
+        (self.origem / "coleta.tmp").write_text("parcial", encoding="utf-8")
+        (self.origem / ".teste_residuo.json").write_text("{}", encoding="utf-8")
+        (self.origem / "codigo.py").write_text("print('ok')", encoding="utf-8")
+        destino = self.raiz / "pacote_residuos"
+        manifesto = criar_pacote(
+            self.origem,
+            destino,
+            verificar_processos_fn=processos_parados,
+        )
+        self.assertFalse((destino / "=").exists())
+        self.assertFalse((destino / "coleta.tmp").exists())
+        self.assertFalse((destino / ".teste_residuo.json").exists())
+        self.assertTrue((destino / "codigo.py").exists())
+        copiados = {item["caminho"] for item in manifesto["arquivos"]}
+        self.assertNotIn("=", copiados)
+        self.assertNotIn("coleta.tmp", copiados)
+        self.assertNotIn(".teste_residuo.json", copiados)
+        self.assertIn("codigo.py", copiados)
+
     def test_destino_dentro_da_origem_e_recusado(self):
         with self.assertRaises(ValueError):
             criar_pacote(
