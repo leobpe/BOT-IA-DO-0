@@ -247,6 +247,7 @@ ARQUIVOS_RUNTIME_WATCHDOG = (
     "validacao_escanteios_ft_asiatico_executavel.py",
     "watchdog.py",
     "watchdog_avaliacoes.py",
+    "watchdog_coleta.py",
 )
 
 def hash_codigo_runtime(pasta, arquivos=None):
