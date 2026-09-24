@@ -78,10 +78,6 @@ from top_criterios_gols import (
     VERSAO_HT as VERSAO_TOP_CRITERIO_HT,
     VERSOES as VERSOES_TOP_CRITERIOS_GOLS,
 )
-from fusao_temporal_api_live import (
-    VERSAO_EXPERIMENTO_FUSAO_TEMPORAL,
-    fusao_temporal_grupo_ativa,
-)
 from filtro_gol_ft_antecipado_preciso import (
     avaliar_filtro_gol_ft_antecipado,
 )
@@ -145,7 +141,6 @@ EXPERIMENTOS_SIMULACAO_GRUPO = frozenset({
     VERSAO_GOL_2T_POS_HT_RED,
     VERSAO_GOL_FT_TENDENCIA_MAIS_UM,
     *VERSOES_TOP_CRITERIOS_GOLS,
-    VERSAO_EXPERIMENTO_FUSAO_TEMPORAL,
     VERSAO_PROXIMO_GOL_BALANCEADO_SOMBRA,
 })
 ESCANTEIOS_FT_ASIATICO_MULTIPLOS_GRUPO_ATIVO = os.getenv(
@@ -457,20 +452,6 @@ def candidato_top_criterio_grupo_teste(candidato):
     )
 
 
-def candidato_fusao_temporal_grupo_teste(candidato):
-    features = _features_candidato(candidato)
-    fusao = features.get("fusao_temporal_api_live") or {}
-    return bool(
-        fusao_temporal_grupo_ativa()
-        and versao_exploracao_candidato(candidato)
-        == VERSAO_EXPERIMENTO_FUSAO_TEMPORAL
-        and candidato.get("status") == "simulacao"
-        and fusao.get("valida") is True
-        and fusao.get("sobrescreveu_packball") is False
-        and fusao.get("preenchimentos")
-    )
-
-
 def candidato_asiatico_ft_multiplos_grupo_teste(candidato):
     """Libera somente o asiático FT já medido, com rollback explícito."""
     features = _features_candidato(candidato)
@@ -521,7 +502,6 @@ def candidato_experimento_grupo_teste(candidato):
         or candidato_gol_2t_pos_ht_red_grupo_teste(candidato)
         or candidato_gol_ft_tendencia_mais_um_grupo_teste(candidato)
         or candidato_top_criterio_grupo_teste(candidato)
-        or candidato_fusao_temporal_grupo_teste(candidato)
         or candidato_asiatico_ft_multiplos_grupo_teste(candidato)
         or candidato_proximo_gol_balanceado_grupo_teste(candidato)
     )
