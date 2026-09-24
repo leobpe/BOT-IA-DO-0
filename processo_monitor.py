@@ -248,6 +248,7 @@ ARQUIVOS_RUNTIME_WATCHDOG = (
     "watchdog.py",
     "watchdog_avaliacoes.py",
     "watchdog_auditorias.py",
+    "watchdog_breakers.py",
     "watchdog_coleta.py",
     "watchdog_resumo_diario.py",
 )
