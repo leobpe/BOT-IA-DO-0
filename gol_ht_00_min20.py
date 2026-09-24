@@ -142,9 +142,6 @@ def _atividade_5min(candidato):
     janela = (features.get("janelas") or {}).get("5")
     if not isinstance(janela, dict) or janela.get("disponivel") is not True:
         return None
-    fusao = features.get("fusao_temporal_api_live") or {}
-    if "5.chutes" in (fusao.get("preenchimentos") or []):
-        return None
     evidencia = validar_janela_chutes_recentes(janela)
     if evidencia is None or evidencia["chutes_total"] < 1:
         return None
