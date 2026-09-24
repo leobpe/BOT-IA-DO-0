@@ -1,0 +1,78 @@
+name: testes
+
+# Roda a suite completa a cada push na main e em todo pull request.
+# A suite e offline: nao precisa de .env, de banco nem de segredo algum.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  # Um push novo na mesma branch cancela a execucao anterior.
+  group: testes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  suite:
+    # Windows porque ha testes de autostart e de instalacao secundaria que
+    # dependem do sistema; rodar em Linux exigiria verificar isso antes.
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: requirements.lock.txt
+
+      - name: Instalar dependencias fixadas
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock.txt
+
+      - name: Rodar a suite
+        run: python -m unittest discover -s . -t . -p "test_*.py"
+
+      - name: Conferir que a suite nao deixou arquivo para tras
+        shell: bash
+        run: |
+          # Um teste que grava fora do seu diretorio temporario contamina as
+          # execucoes seguintes e pode sobrescrever estado operacional na
+          # pasta de trabalho. Foi um bug real, corrigido no PR #8.
+          sujeira="$(git status --porcelain)"
+          if [ -n "$sujeira" ]; then
+            echo "A suite deixou arquivos para tras:"
+            echo "$sujeira"
+            exit 1
+          fi
+          echo "Nenhum residuo."
+
+      - name: Conferir a assinatura de runtime
+        shell: bash
+        run: |
+          # As listas de ARQUIVOS_RUNTIME precisam cobrir toda a arvore de
+          # imports, senao um modulo fica fora da verificacao de integridade.
+          python -c "
+          from pathlib import Path
+          from processo_monitor import (
+              dependencias_runtime_ausentes,
+              ARQUIVOS_RUNTIME,
+              ARQUIVOS_RUNTIME_WATCHDOG,
+          )
+          faltando = {
+              'ARQUIVOS_RUNTIME': dependencias_runtime_ausentes(
+                  Path.cwd(), ARQUIVOS_RUNTIME),
+              'ARQUIVOS_RUNTIME_WATCHDOG': dependencias_runtime_ausentes(
+                  Path.cwd(), ARQUIVOS_RUNTIME_WATCHDOG),
+          }
+          for lista, ausentes in faltando.items():
+              if ausentes:
+                  raise SystemExit(f'{lista} nao declara: {ausentes}')
+          print('Manifestos completos.')
+          "
