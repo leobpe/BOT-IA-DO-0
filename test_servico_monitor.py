@@ -2816,7 +2816,6 @@ class ServicoMonitorTest(unittest.TestCase):
         self.servico._despachar_alertas = Mock()
         self.servico._adiar_alertas_ciclo = False
         self.servico._alertas_pendentes_ciclo = []
-        self.servico._fontes_temporais_aptas = Mock(return_value=False)
 
         def gerar(_jogo, _stats, _evolucao, odds, _qualidade):
             oferta = escolher_over_ao_vivo(odds, "gols", total_atual=0)

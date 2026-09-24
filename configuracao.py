@@ -266,8 +266,6 @@ def validar_configuracao(env=None):
         erros.append("GOL_2T_POS_HT_RED_SOMBRA_ATIVO deve ser 0 ou 1")
     if env.get("GOL_2T_POS_HT_RED_GRUPO_ATIVO", "0") not in ("0", "1"):
         erros.append("GOL_2T_POS_HT_RED_GRUPO_ATIVO deve ser 0 ou 1")
-    if env.get("API_LIVE_TEMPORAL_GRUPO_ATIVO", "0") not in ("0", "1"):
-        erros.append("API_LIVE_TEMPORAL_GRUPO_ATIVO deve ser 0 ou 1")
     flag_lista_temporal = env.get(
         "INDICADORES_LISTA_TEMPORAIS_APLICACAO_SINAIS", "1"
     )
