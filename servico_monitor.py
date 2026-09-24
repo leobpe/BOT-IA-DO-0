@@ -205,13 +205,6 @@ from fusao_packball_thestats import (
     fundir_estatisticas_packball_thestats,
     marcar_candidatos_dependentes_fusao,
 )
-from consenso_multifonte_sombra import (
-    VERSAO_CONSENSO_MULTIFONTE_SOMBRA,
-    estatisticas_do_consenso,
-    isolar_candidatos_consenso,
-    registrar_ou_validar_consenso_multifonte,
-    validar_consenso_multifonte,
-)
 from gols_antecipados import (
     elegivel_para_enriquecimento_antecipado,
     gerar_gols_antecipados,
@@ -855,7 +848,6 @@ class ServicoMonitor:
         registrar_ou_validar_politica_avaliacao_gols(conexao)
         registrar_ou_validar_definicao_exploracao_gol_ft_v3(conexao)
         registrar_ou_validar_politica_avaliacao_gol_ft_v3(conexao)
-        registrar_ou_validar_consenso_multifonte(conexao)
         registrar_ou_validar_definicao_gol_ft_v2_controle(conexao)
         registrar_ou_validar_politica_gol_ft_v2_controle(conexao)
         registrar_ou_validar_challenger_v2_ft(conexao)
@@ -8025,173 +8017,6 @@ class ServicoMonitor:
             )
             return resumo
 
-    def _analisar_consenso_multifonte_sombra(
-        self, tarefas, fixtures_api, *, agora=None
-    ):
-        """Analisa jogos sem detalhe PB usando duas APIs, sem enviar sinais."""
-        resumo = {
-            "versao": VERSAO_CONSENSO_MULTIFONTE_SOMBRA,
-            "ativa": os.getenv(
-                "CONSENSO_MULTIFONTE_SOMBRA_ATIVO", "0"
-            ) == "1",
-            "avaliadas": 0,
-            "consensos": 0,
-            "snapshots": 0,
-            "simulacoes": 0,
-            "rejeicoes": {},
-            "aplicacao_sinais": False,
-            "telegram": False,
-            "calibracao": False,
-            "promocao_automatica": False,
-            "rollback": "CONSENSO_MULTIFONTE_SOMBRA_ATIVO=0",
-        }
-        if not resumo["ativa"]:
-            resumo["estado"] = "desativada"
-            return resumo
-        agora = agora or datetime.now().astimezone()
-        por_fixture = {
-            (item.get("fixture") or {}).get("id"): item
-            for item in fixtures_api or []
-            if isinstance(item, dict)
-        }
-        evidencias_ts = getattr(self, "_thestatsapi_fusao_ciclo", {})
-
-        def rejeitar(motivo):
-            chave = str(motivo or "indeterminado")
-            resumo["rejeicoes"][chave] = (
-                int(resumo["rejeicoes"].get(chave, 0)) + 1
-            )
-
-        for tarefa in tarefas or []:
-            jogo = (tarefa or {}).get("jogo") or {}
-            fixture_id = tarefa.get("api_fixture_id_prioridade")
-            fixture = por_fixture.get(fixture_id)
-            evidencia_ts = evidencias_ts.get(jogo.get("url")) or {}
-            if fixture is None or not evidencia_ts:
-                continue
-            resumo["avaliadas"] += 1
-            resposta_stats = evidencia_ts.get("resposta_stats")
-            resposta_odds = evidencia_ts.get("resposta_odds")
-            if not resposta_stats or not resposta_odds:
-                rejeitar("thestats_detalhes_incompletos")
-                continue
-            gate_odds = validar_gate_operacional_thestatsapi(
-                jogo,
-                evidencia_ts.get("diagnostico"),
-                resposta_stats,
-                resposta_odds,
-                agora=agora,
-            )
-            if gate_odds.get("apto_sombra") is not True:
-                rejeitar(gate_odds.get("motivo"))
-                continue
-            snapshot_api = normalizar_snapshot_api_live(
-                fixture,
-                jogo.get("url"),
-                orientacao=tarefa.get(
-                    "api_orientacao_prioridade", "direta"
-                ),
-                coletado_em=agora,
-            )
-            diagnostico = validar_consenso_multifonte(
-                jogo, fixture, snapshot_api, evidencia_ts, agora=agora
-            )
-            if not diagnostico.get("valido"):
-                rejeitar(diagnostico.get("motivo"))
-                continue
-            evolucao = obter_evolucao_api_live(
-                self.banco.conexao,
-                fixture_id,
-                jogo.get("url"),
-                agora=agora.replace(tzinfo=None),
-            )
-            if not isinstance(evolucao.get("5"), dict):
-                rejeitar("historico_api_5min_insuficiente")
-                continue
-            odds = converter_odds_bet365_contrato_interno(
-                resposta_odds, agora=agora
-            )
-            if not (odds.get("ao_vivo") or []):
-                rejeitar("odds_bet365_gols_ausentes")
-                continue
-            estatisticas = estatisticas_do_consenso(
-                snapshot_api, evidencia_ts
-            )
-            qualidade = {
-                "pontuacao": 90.0,
-                "completude": 1.0,
-                "campos_ausentes": [
-                    "Índice de pressão", "Ataques perigosos"
-                ],
-                "fontes": ["api_football", "thestatsapi"],
-                "alertas": ["sem_detalhe_packball_modo_sombra"],
-                "divergencia_critica": False,
-                "apto_para_sinal": True,
-                "apto_para_liquidacao": True,
-                "versao": "qualidade-consenso-multifonte-sombra-v1",
-            }
-            candidatos = self._gerar_candidatos_rastreaveis(
-                jogo, estatisticas, evolucao, odds, qualidade
-            )
-            candidatos = filtrar_mercados_operacionais(candidatos)
-            aplicar_politicas_por_mercado(candidatos)
-            for candidato in candidatos:
-                aplicar_politica_gol_ht(candidato)
-                aplicar_politica_gols_tempo(candidato)
-            candidatos = isolar_candidatos_consenso(
-                candidatos, diagnostico
-            )
-            if not candidatos:
-                rejeitar("nenhum_gol_aprovado_pela_regra_atual")
-                continue
-            registro = {
-                "coletado_em": agora.replace(tzinfo=None),
-                **jogo,
-                "estatisticas": estatisticas,
-                "odds": odds,
-                "evolucao": evolucao,
-                "confirmacao_api": {
-                    "fixture_id": fixture_id,
-                    "orientacao": tarefa.get(
-                        "api_orientacao_prioridade", "direta"
-                    ),
-                },
-                "estatisticas_api": fixture.get("statistics") or [],
-                "contexto_api": {
-                    "consenso_multifonte_sombra": diagnostico,
-                    "sem_detalhe_packball": True,
-                },
-                "qualidade": qualidade,
-                "falhas_fontes": [],
-            }
-            snapshot_id = self.salvar_registro(registro)
-            if not snapshot_id:
-                rejeitar("snapshot_nao_persistido")
-                continue
-            self.backtest.avaliar_snapshot(snapshot_id)
-            novos = []
-            for candidato in candidatos:
-                if self.banco.exploracao_sombra_ja_registrada(
-                    snapshot_id,
-                    candidato["mercado"],
-                    candidato["regra_versao"],
-                    VERSAO_CONSENSO_MULTIFONTE_SOMBRA,
-                ):
-                    continue
-                candidato["regra_fingerprint"] = self.regra_fingerprints[
-                    candidato["regra_versao"]
-                ]
-                novos.append(candidato)
-            if not novos:
-                rejeitar("exploracao_ja_registrada")
-                continue
-            self.banco.salvar_candidatos(snapshot_id, novos, agora)
-            resumo["consensos"] += 1
-            resumo["snapshots"] += 1
-            resumo["simulacoes"] += len(novos)
-        resumo["estado"] = "analisando_sombra"
-        return resumo
-
     def _atualizar_taxas_ligas_gols(self, pagina_detalhe, jogos):
         ativa = str(os.getenv(
             "PRIORIZACAO_LIGAS_GOLS_ATIVA", "1"
@@ -8616,23 +8441,6 @@ class ServicoMonitor:
             reserva_auditoria_thestats
         )
         fixtures_restantes = list(fixtures_api)
-        # Mede, em uma coorte totalmente separada, oportunidades que ficariam
-        # fora do orçamento de detalhes PackBall. Mesmo um consenso válido
-        # entre as duas APIs gera apenas `simulacao` e nunca Telegram.
-        try:
-            consenso_multifonte = self._analisar_consenso_multifonte_sombra(
-                tarefas[limite_pb:], fixtures_api
-            )
-        except Exception as erro:
-            consenso_multifonte = {
-                "versao": VERSAO_CONSENSO_MULTIFONTE_SOMBRA,
-                "estado": "falha_isolada",
-                "erro": type(erro).__name__,
-                "aplicacao_sinais": False,
-                "telegram": False,
-                "calibracao": False,
-                "promocao_automatica": False,
-            }
         coleta = self._processar_tarefas_detalhadas(
             pagina_detalhe,
             tarefas,
@@ -8655,7 +8463,6 @@ class ServicoMonitor:
             self._avaliar_quarentena_fallback_ht_prospectiva()
         )
         coleta["detalhamento_adaptativo"] = detalhamento_adaptativo
-        coleta["consenso_multifonte_sombra"] = consenso_multifonte
         self._interromper_se_manutencao("apos_coleta_detalhada")
         # A fonte auxiliar permanece isolada: falha externa não invalida a
         # leitura PackBall e o diagnóstico registra exatamente o lote coberto.

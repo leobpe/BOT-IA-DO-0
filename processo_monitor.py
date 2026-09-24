@@ -53,7 +53,6 @@ ARQUIVOS_RUNTIME = (
     "estatistica.py", "evolucao.py",
     "historico_api_live.py",
     "integracao_thestatsapi_sombra.py",
-    "consenso_multifonte_sombra.py",
     "fallback_indicadores_lista.py",
     "fusao_packball_thestats.py",
     "gols_antecipados.py",
