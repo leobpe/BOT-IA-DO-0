@@ -6374,7 +6374,6 @@ class WatchdogTest(unittest.TestCase):
                 },
                 "contexto_api": {
                     "sem_detalhe_packball": True,
-                    "consenso_multifonte_sombra": {"valido": True},
                 },
             })
 
