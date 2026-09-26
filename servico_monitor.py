@@ -296,11 +296,6 @@ from top_criterios_gols import gerar_top_criterio_ft, gerar_top_criterio_ht
 from validacao_top_criterios_gols import (
     registrar_ou_validar_top_criterios_gols,
 )
-from fusao_temporal_api_live import (
-    fundir_evolucao_temporal_como_fallback,
-    fusao_temporal_grupo_ativa,
-    gerar_candidatos_fusao_temporal,
-)
 from roteador_odds_thestatsapi import (
     converter_odds_bet365_contrato_interno,
     validar_gate_operacional_thestatsapi,
@@ -5917,10 +5912,8 @@ class ServicoMonitor:
             "telegram": False,
             "promocao_automatica": False,
         }
-        candidatos_fusao_temporal = []
         candidatos_base_lista_temporal = []
         evolucao_sem_fallback_lista = {"5": None, "10": None, "15": None}
-        diagnostico_temporal = {}
         diagnostico_indicadores_temporais_lista = {
             "versao": "packball-lista-janelas-sombra-v1",
             "estado": "nao_avaliado",
@@ -6419,19 +6412,6 @@ class ServicoMonitor:
                         qualidade,
                     )
                 )
-            if self._fontes_temporais_aptas(instante):
-                evolucao_fundida, diagnostico_temporal = (
-                    fundir_evolucao_temporal_como_fallback(
-                        evolucao, contexto_api
-                    )
-                )
-                if evolucao_fundida is not None:
-                    candidatos_fusao_temporal = (
-                        self._gerar_candidatos_rastreaveis(
-                            jogo, estatisticas, evolucao_fundida,
-                            odds, qualidade,
-                        )
-                    )
             if (
                 diagnostico_fusao.get("valida")
                 and diagnostico_fusao.get("complementou")
@@ -6500,9 +6480,6 @@ class ServicoMonitor:
         candidatos_base_lista_temporal = filtrar_mercados_operacionais(
             candidatos_base_lista_temporal
         )
-        candidatos_fusao_temporal = filtrar_mercados_operacionais(
-            candidatos_fusao_temporal
-        )
         aplicar_politicas_por_mercado(candidatos)
         for candidato in candidatos:
             aplicar_politica_gol_ht(candidato)
@@ -6518,14 +6495,6 @@ class ServicoMonitor:
             candidatos_base_lista_temporal,
             diagnostico_indicadores_temporais_lista,
         )
-        for candidato in candidatos_fusao_temporal:
-            aplicar_politica_gol_ht(candidato)
-            aplicar_politica_proximo_gol(candidato)
-            aplicar_politica_gols_tempo(candidato)
-        candidatos.extend(gerar_candidatos_fusao_temporal(
-            candidatos, candidatos_fusao_temporal,
-            diagnostico_temporal,
-        ))
         candidatos_antecipados = gerar_gols_antecipados(
             jogo, candidatos, contexto_api, qualidade
         )
@@ -7188,28 +7157,6 @@ class ServicoMonitor:
             "exposicao_gol_partida_existente",
         )
         return True
-
-    def _fontes_temporais_aptas(self, agora=None):
-        """Revalida a promoção periodicamente e falha fechado em regressão."""
-        if not fusao_temporal_grupo_ativa():
-            return False
-        agora = agora or datetime.now()
-        cache = getattr(self, "_cache_prontidao_temporal", None) or {}
-        instante_cache = cache.get("em")
-        if (
-            isinstance(instante_cache, datetime)
-            and (agora - instante_cache).total_seconds() < 300
-        ):
-            return bool(cache.get("apta"))
-        resumo = resumir_historico_api_live(
-            self.banco.conexao, agora=agora
-        )
-        pronta = bool(
-            ((resumo.get("prontidao_revisao") or {}).get("estado"))
-            == "apto_revisao"
-        )
-        self._cache_prontidao_temporal = {"em": agora, "apta": pronta}
-        return pronta
 
     def _resumo_gate_indicadores_lista_temporais(self, agora=None):
         agora = agora or datetime.now()

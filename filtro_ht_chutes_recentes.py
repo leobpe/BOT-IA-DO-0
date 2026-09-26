@@ -103,9 +103,7 @@ def avaliar_chutes_ht(sinal, snapshot, agora=None, env=None):
         # A atualização de odd não renova o horário da estatística técnica.
         if idade_tecnica is None or observada is None or idade_tecnica + observada > MAX_IDADE_SEGUNDOS:
             observada = None
-    fusao = _dict(features.get("fusao_temporal_api_live"))
-    chutes_api = "5.chutes" in (fusao.get("preenchimentos") or [])
-    evidencia = _janela_valida(janela) if janela.get("disponivel") is True and observada is not None and not chutes_api else None
+    evidencia = _janela_valida(janela) if janela.get("disponivel") is True and observada is not None else None
     fonte = "packball"
     lista = _dict(features.get("fallback_temporal_lista"))
     if evidencia and "5.chutes" in (lista.get("campos_complementados") or []):

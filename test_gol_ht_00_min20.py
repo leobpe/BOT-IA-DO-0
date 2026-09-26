@@ -115,16 +115,6 @@ class GolHT00Min20Test(unittest.TestCase):
                     contexto, _qualidade(),
                 ))
 
-    def test_janela_api_fundida_nao_e_tratada_como_packball(self):
-        candidato = _candidato(24)
-        candidato["features"]["fusao_temporal_api_live"] = {
-            "preenchimentos": ["5.chutes"]
-        }
-        self.assertEqual([], gerar_gol_ht_00_min20(
-            {"status": "24'", "placar": "0-0"}, [candidato],
-            _contexto_aprovado(), _qualidade(),
-        ))
-
     def test_exige_00_minuto_linha_odd_e_qualidade(self):
         contexto = _contexto_aprovado()
         for jogo, candidato, qualidade in (
